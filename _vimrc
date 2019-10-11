@@ -1,32 +1,27 @@
-"call pathogen#infect()
+" 基本
+set number
+set ambiwidth=double
 
-"set nocompatible              " be iMproved, required
-"filetype off                  " required
+" 検索
+set ignorecase
+set smartcase
+set wrapscan
+set incsearch
+set hlsearch
 
-" set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-" " alternatively, pass a path where Vundle should install bundles
-" "let path = '~/some/path/here'
-" "call vundle#rc(path)
-"
-" " let Vundle manage Vundle, required
-"Bundle 'gmarik/vundle'
-
-"Bundle 'zah/nim.vim'
-"Bundle 'scrooloose/syntastic'
-
-"
-"filetype plugin indent on     " required
-
-"fun! JumpToDef()
-"  if exists("*GotoDefinition_" . &filetype)
-"    call GotoDefinition_{&filetype}()
-"  else
-"    exe "norm! \<C-]>"
-"  endif
-"endf
-
-" Jump to tag
-"nn <M-g> :call JumpToDef()<cr>
-"ino <M-g> <esc>:call JumpToDef()<cr>i
+" 表示
+set noerrorbells
+set showmatch matchtime=1
+set laststatus=2
+set display=lastline
+set history=10000
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set guioptions+=a
+set showmatch
+set smartindent
+set noswapfile
+set title
+syntax on
