@@ -1,31 +1,36 @@
+" vi互換
+set nocompatible
+
 " 基本
-set number
 set ambiwidth=double
+set number
+syntax on
+
+" エンコード
+set encoding=utf-8
 
 " 検索
-set ignorecase
-set smartcase
-set wrapscan
-set incsearch
 set hlsearch
+set ignorecase
+set incsearch
+set wrapscan
+set smartcase
 
 " 表示
-set noerrorbells
-set showmatch matchtime=1
-set laststatus=2
-set display=lastline
-set history=10000
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set guioptions+=a
-set showmatch
-set smartindent
-set noswapfile
-set title
-syntax on
 set colorcolumn=80,100,120
+set display=lastline
+set guioptions+=a
+set history=10000
+set laststatus=2
+set noerrorbells
+set noswapfile
+set ruler
+set showcmd
+set showmatch
+set showmatch matchtime=1
+set smartindent
+set tabstop=2
+set title
 highlight ColorColumn guibg=#202020 ctermbg=lightgray
 augroup HighlightTrailingSpaces
   autocmd!
@@ -34,7 +39,30 @@ augroup HighlightTrailingSpaces
 augroup END
 
 " 折り畳み
-:set foldmethod=indent
+set foldmethod=indent
+set foldlevel=100
+set foldcolumn=5
+
+" 空白文字
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=4
+
+" カラースキーマ
+" set termguicolors
+" set background=light
+set background=dark
+" let g:solarized_termcolors=256
+" let ayucolor="light"
+" let ayucolor="mirage"
+" let ayucolor="dark"
+colorscheme gruvbox
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none
 
 " プラグイン
 " Vundlw
@@ -54,4 +82,4 @@ Plugin 'plasticboy/vim-markdown'
 """ markdown {{{
   let g:vim_markdown_folding_disabled=1
   let g:previm_enable_realtime = 1
-" }}}
+"s }}}
